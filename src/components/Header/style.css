@@ -1,0 +1,9 @@
+#main-header {
+    background-color: rgb(78, 74, 73);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
