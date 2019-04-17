@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 
-import axios from 'axios';
-
+import './style.css';
 
 export default class Main extends Component {
     state = {
@@ -26,12 +25,15 @@ export default class Main extends Component {
     render() {
         const {items } = this.state;
         return (
-            <div>
-                {this.state.items.map(item => (
-                    <h2 key={item._id}>{item.title}</h2>
-                    // <h2 key={item._id}>{item.name}</h2>
+            <div className="itemList">
+                {items.map(item => (
+                    <article  key={item._id}>   
+                    <h2>{item.title}</h2>
+                    <a href="#">Ver plano</a>
+                    </article>
                 ))}
             </div>
         )
     }
 }
+                    // <h2 key={item._id}>{item.name}</h2>
