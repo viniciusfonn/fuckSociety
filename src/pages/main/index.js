@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import {Link } from 'react-router-dom';
 
 import './style.css';
 
@@ -29,7 +30,7 @@ export default class Main extends Component {
                 {items.map(item => (
                     <article  key={item._id}>   
                     <h2>{item.title}</h2>
-                    <a href="#">Ver plano</a>
+                    <Link to={`/products/${item._id}`}>Ver plano</Link>
                     </article>
                 ))}
             </div>
